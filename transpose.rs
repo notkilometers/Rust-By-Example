@@ -1,5 +1,6 @@
 use std::fmt;
 
+// transpose function to swap second and third indices
 fn transpose (matrix:Matrix) -> Matrix {
         return Matrix {
                 first: matrix.first,
@@ -9,6 +10,7 @@ fn transpose (matrix:Matrix) -> Matrix {
         };
 }
 
+// matrix struct
 struct Matrix {
         first: f32,
         second: f32,
@@ -16,6 +18,7 @@ struct Matrix {
         fourth: f32
 }
 
+// implementation for matrix output
 impl std::fmt::Display for Matrix {
         fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
                 write!(f, "({}, {})\n({}, {})\n", self.first, self.second, self.third, self.fourth)
